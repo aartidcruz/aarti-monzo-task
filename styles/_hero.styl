@@ -90,9 +90,20 @@
 
 #results
   background $lt-blue
+  .result-parent
+    opacity 0
+    display inline-block
+    transform(translateY(-5px))
+    transition(400ms)
+    &.active
+      transform(translateY(0))
+      opacity 1
+    for num in 1 2 3 4 5
+      &:nth-child({num})
+        transition-delay 100ms * num
+
   .result
     background white
-    display inline-block
     min-width 200px
     border-radius 10px
     padding 16px
@@ -102,6 +113,7 @@
     &:hover
       filter(drop-shadow(0 10px 5px rgba(44,58,72,0.1)))
       transform(scale(1.02))
+
     .caption
       font-weight 700
       font-size 16px

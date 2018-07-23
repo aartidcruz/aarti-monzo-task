@@ -5,7 +5,7 @@
   .container-fluid.table
     .row.table-cell
       .col-sm-12.col-md-4
-        h2 When is the meeting time?
+        h2 When is the meeting?
         .select-container
           select(name="Select a time")
             option(value="9:00am") 9:00am
@@ -41,19 +41,23 @@
     .row.table-cell
       .column-sm-12
         h2 Available rooms
-        .result
-          p The boardroom
-          p.caption Book room
+        .result-parent
+          .result
+            p The boardroom
+            p.caption Book room
+            
+        .result-parent
+          .result
+            p The pineapple lounge
+            p.caption Book room
           
-        .result
-          p The pineapple lounge
-          p.caption Book room
+        .result-parent
+          .result
+            p The kitchen
+            p.caption Book room
           
-        .result
-          p The kitchen
-          p.caption Book room
-          
-        .result
-          p The sofa
-          p.caption Book room
+        .result-parent
+          .result
+            p The sofa
+            p.caption Book room
           
