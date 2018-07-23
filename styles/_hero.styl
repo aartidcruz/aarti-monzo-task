@@ -1,13 +1,64 @@
 .section
-  padding 64px 32px
+  padding 54px 32px
+  box-sizing border-box
+  height 50vh
+  width 100%
+  h2
+    padding-bottom 32px
+
+
+.table
+  display table
+
+.table-cell
+  display table-cell
+  vertical-align middle
+
+.container-fluid
+  max-width 1040px
+
+@media screen and (max-width: 1100px)
+  .section
+    height auto
+  .table,
+  .table-cell
+    display block
+
 
 #hero
   background $purple
   color white
+  text-align left
+  select
+    -webkit-appearance none
+    border none
+    border-radius 0
+    font-family 'Dosis'
+    font-size 24px
+    background transparent
+    color white
+    border-bottom 3px solid white
+    width 240px
+    max-width 100%
+    outline none
+    cursor pointer
+  .select-container
+    position relative
+    width 240px
+    max-width 100%
+    // margin 0 auto
+    &:after
+      content ''
+      top 10px
+      right 0px
+      width 20px
+      height 20px
+      position absolute
+      background-size 100% 100%
+      background-repeat no-repeat
+      background-image url('../assets/arrow.svg')
 
 #options
-  h2
-    padding-bottom 32px
   .option
     padding 0 8px
     display inline-block
@@ -16,6 +67,7 @@
     &:hover
       .circle
         filter(drop-shadow(0 10px 5px rgba(44,58,72,0.1)))
+        transform(scale(1.02))
     &.active
       .circle
         background $blue
@@ -30,8 +82,40 @@
   .circle
     transition(400ms)
     border-radius 50%
-    border 1px solid #DCE1F4
+    // border 1px solid #DCE1F4
     background white
     width 100px
     height 100px
     margin 0 auto
+
+#results
+  background $lt-blue
+  .result
+    background white
+    display inline-block
+    min-width 200px
+    border-radius 10px
+    padding 16px
+    margin 0 8px
+    cursor pointer
+    transition(400ms)
+    &:hover
+      filter(drop-shadow(0 10px 5px rgba(44,58,72,0.1)))
+      transform(scale(1.02))
+    .caption
+      font-weight 700
+      font-size 16px
+      padding-right 16px
+      display inline-block
+      margin 0
+      position relative
+      &:after
+        content ''
+        top 8px
+        right 0
+        width 12px
+        height 12px
+        position absolute
+        background-size 100% 100%
+        background-repeat no-repeat
+        background-image url('../assets/arrow-dark.svg')
