@@ -1,0 +1,37 @@
+.section
+  padding 64px 32px
+
+#hero
+  background $purple
+  color white
+
+#options
+  h2
+    padding-bottom 32px
+  .option
+    padding 0 8px
+    display inline-block
+    text-align center
+    cursor pointer
+    &:hover
+      .circle
+        filter(drop-shadow(0 10px 5px rgba(44,58,72,0.1)))
+    &.active
+      .circle
+        background $blue
+    img
+      transition(400ms)
+      max-width 70px
+      margin 0 auto
+      height 100px
+      vertical-align middle
+    p
+      padding 6px 0
+  .circle
+    transition(400ms)
+    border-radius 50%
+    border 1px solid #DCE1F4
+    background white
+    width 100px
+    height 100px
+    margin 0 auto
