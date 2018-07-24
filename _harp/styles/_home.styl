@@ -135,3 +135,28 @@
     &:hover
       filter(drop-shadow(0px 14px 13px rgba(44,58,72,0.34)))
       transform(scale(1.02))
+
+@media screen and (max-width: 500px)
+  body
+    p
+      font-size 16px
+    h2
+      font-size 24px
+  #options
+    h2
+      padding-top 52px
+    .option
+      padding 0 5px
+    .circle
+      width 80px
+      height 80px
+      svg
+        width 50px !important
+        height 50px !important
+  #svg-animations
+    overflow-x scroll
+    overflow-y hidden
+    white-space nowrap
+    padding 8px 0
+    margin-left -46px
+    margin-right -46px
